@@ -1,0 +1,9 @@
+[submodule "src/data/thoughts"]
+	path = src/data/thoughts
+	url = https://github.com/RangHo/thoughts.git
+[submodule "src/data/knowledges"]
+	path = src/data/knowledges
+	url = https://github.com/RangHo/knowledges.git
+[submodule "src/data/talks"]
+	path = src/data/talks
+	url = https://github.com/RangHo/talks.git
