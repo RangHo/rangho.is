@@ -45,6 +45,9 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.4.0
+      ox-svelte:
+        specifier: ^0.4.4
+        version: 0.4.4(svelte@5.39.6)
       prettier:
         specifier: ^3.4.2
         version: 3.6.2
@@ -58,8 +61,8 @@ importers:
         specifier: ^4.0.0
         version: 4.3.2(picomatch@4.0.3)(svelte@5.39.6)(typescript@5.9.2)
       svelte-preprocess-org:
-        specifier: ^0.3.0
-        version: 0.3.0(ox-svelte@0.4.4(svelte@5.39.6))(svelte@5.39.6)
+        specifier: ^0.3.3
+        version: 0.3.3(ox-svelte@0.4.4(svelte@5.39.6))(svelte@5.39.6)
       typescript:
         specifier: ^5.0.0
         version: 5.9.2
@@ -1348,8 +1351,8 @@ packages:
       svelte:
         optional: true
 
-  svelte-preprocess-org@0.3.0:
-    resolution: {integrity: sha512-LCWjWla4l82DimPdXxEK7CXtO0NC4sZSkrAxX0nNdCn7uzNy+zyGc1ZAz0tDvgN111qBhlypdUlI2BUbu9zW/Q==}
+  svelte-preprocess-org@0.3.3:
+    resolution: {integrity: sha512-+xNrGLikxbzlOz5cEv3OHtw4Ze6NGjYSQBnQAdKSWw0Gq/RBm2YD+9Q8pRkhzpLQlx4J8Q/mDqoof5/wxic2Mw==}
     peerDependencies:
       ox-svelte: 0.4.4
       svelte: ^5.2.11
@@ -2766,7 +2769,7 @@ snapshots:
     optionalDependencies:
       svelte: 5.39.6
 
-  svelte-preprocess-org@0.3.0(ox-svelte@0.4.4(svelte@5.39.6))(svelte@5.39.6):
+  svelte-preprocess-org@0.3.3(ox-svelte@0.4.4(svelte@5.39.6))(svelte@5.39.6):
     dependencies:
       ox-svelte: 0.4.4(svelte@5.39.6)
       svelte: 5.39.6
