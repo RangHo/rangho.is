@@ -30,7 +30,9 @@ jobs:
           version: 30.2
 
       - name: Build project
-        run: pnpm build
+        run: |
+          pnpm install
+          pnpm build
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
