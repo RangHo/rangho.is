@@ -14,7 +14,7 @@ const hljsThemes: Record<string, { default: string }> = import.meta.glob(
  *
  * @returns Record of all themes with the name as key and the CSS text as values.
  */
-function initializeThemes(): Record<string, string> {
+function initialize(): Record<string, string> {
   const themes: Record<string, string> = {};
 
   for (const path in hljsThemes) {
@@ -31,6 +31,6 @@ function initializeThemes(): Record<string, string> {
 /**
  * Record of all Highlight.js themes available in the default installation.
  */
-export const themes = initializeThemes();
+const themes = initialize();
 
 export default themes;

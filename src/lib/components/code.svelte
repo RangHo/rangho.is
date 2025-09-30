@@ -12,4 +12,4 @@
 </script>
 
 <!-- eslint-disable-next-line svelte/no-at-html-tags -->
-<pre><code class={`language-${lang}`}>{@html renderedHTML}</code></pre>
+<pre class="hljs"><code class={`language-${lang}`}>{@html renderedHTML}</code></pre>
