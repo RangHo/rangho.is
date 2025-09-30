@@ -7,7 +7,6 @@ import { orgPreprocess } from "svelte-preprocess-org";
 const config = {
   extensions: [".svelte", ".org"],
   preprocess: [
-    vitePreprocess(),
     orgPreprocess({
       extensions: [".org"],
       componentImportAlist: {
@@ -15,12 +14,15 @@ const config = {
         "$lib/components/math.svelte": "Math",
       },
       idLocations: ["src/data/knowledges/*.org", "src/data/thoughts/*.org"],
+      imageFormat: "<enhanced:img src={`%s`} alt={`%s`} />",
       latexEnvironmentFormat: "<Math expression={%s} displayMode />",
       latexDisplayFragmentFormat:
         "<Math expression={%s} displayMode inlineMode />",
       latexInlineFragmentFormat: "<Math expression={%s} inlineMode />",
       srcBlockFormat: "<Code lang={`%s`} code={%s} />",
+      withSectionNumbers: false,
     }),
+    vitePreprocess(),
   ],
   kit: {
     adapter: adapter(),
