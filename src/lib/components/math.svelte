@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { default as katex, type KatexOptions } from "katex";
+  import { type KatexOptions, default as katex } from "katex";
 
   interface Props extends KatexOptions {
     expression: string;

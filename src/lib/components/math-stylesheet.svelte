@@ -3,10 +3,10 @@
 </script>
 
 <svelte:head>
-    <link
-      id="katex-stylesheet"
-      rel="stylesheet"
-      href={`https://cdn.jsdelivr.net/npm/katex@${katexVersion}/dist/katex.min.css`}
-      crossorigin="anonymous"
-    />
+  <link
+    id="katex-stylesheet"
+    rel="stylesheet"
+    href={`https://cdn.jsdelivr.net/npm/katex@${katexVersion}/dist/katex.min.css`}
+    crossorigin="anonymous"
+  />
 </svelte:head>

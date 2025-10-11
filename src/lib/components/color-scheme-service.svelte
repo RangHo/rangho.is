@@ -1,12 +1,13 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  import { browser } from "$app/environment";
   import {
     destroyColorScheme,
     getColorScheme,
     initializeColorScheme,
   } from "$lib/color-scheme.svelte";
+
+  import { browser } from "$app/environment";
 
   let scheme = getColorScheme();
 

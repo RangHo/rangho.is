@@ -1,11 +1,24 @@
 <script lang="ts">
-  import favicon from "$lib/assets/favicon.svg";
+  import type { Snippet } from "svelte";
 
-  let { children } = $props();
+  import ColorSchemeService from "$lib/components/color-scheme-service.svelte";
+
+  import "@unocss/reset/sanitize/sanitize.css";
+  import "@unocss/reset/sanitize/assets.css";
+  import "virtual:uno.css";
+  import CodeStylesheet from "$lib/components/code-stylesheet.svelte";
+  import MathStylesheet from "$lib/components/math-stylesheet.svelte";
+
+  interface Props {
+    children: Snippet;
+  }
+
+  let { children }: Props = $props();
 </script>
 
-<svelte:head>
-  <link rel="icon" href={favicon} />
-</svelte:head>
+<CodeStylesheet dark="github-dark" light="github" />
+<MathStylesheet />
 
-{@render children?.()}
+<ColorSchemeService />
+
+{@render children()}
