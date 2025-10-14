@@ -17,16 +17,9 @@ export default defineConfig({
         "h1, h2, h3, h4, h5, h6": {
           "font-family": "var(--font-head)",
         },
-        // GFM-like "admonition" blocks.
-        ".note": {
-          color: "var(--un-prose-quotes)",
-          "border-inline-start-width": "0.25rem",
-          "border-inline-start-color": "var(--un-prose-quote-borders)",
-          "padding-inline-start": "2em",
-        },
-        ".note p:first-of-type::before": {
-          content: '"Note: "',
-          'font-weight': '600',
+        // Make striked text a bit lighter.
+        s: {
+          color: theme.colors?.gray?.[500],
         },
       }),
     }),

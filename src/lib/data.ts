@@ -1,7 +1,7 @@
 import type { Component } from "svelte";
-import type { OrgMetadata } from "ox-svelte";
+import type { OrgMetadata, OrgModule } from "ox-svelte";
 
-type Thought = {
+export type Thought = {
   original: string;
   slugified: string;
   component: Component;
@@ -26,7 +26,7 @@ export const thoughts: Thought[] = Object.entries(thoughtsRaw).map(
     const basenameSansExtension = basename.replace(/\.org$/, "");
     const slugified = basenameSansExtension.replace(/_/g, "-");
     return {
-      original: basenameSansExtension,
+      original: basename,
       slugified,
       component: module.default,
       metadata: module.metadata,

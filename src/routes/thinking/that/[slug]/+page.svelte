@@ -6,15 +6,24 @@
 </script>
 
 <main>
-  <article
-    class="mx-auto prose prose-sm md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert"
-  >
-    <h1 class="mb-0 font-head">{metadata.title}</h1>
-    <Thought />
+  <article>
+    <div
+      class="mx-auto px-4 prose prose-teal prose-sm md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert"
+    >
+      <hgroup class="pb-5 mb-10 font-head text-center">
+        <h1 class="my-0">{metadata.title}</h1>
+        <p class="my-5">{metadata.subtitle}</p>
+      </hgroup>
+      <Thought />
+    </div>
   </article>
 </main>
 
 <style>
+  hgroup {
+    border-bottom: 5px double var(--un-prose-hr);
+  }
+
   :global {
     /** Note */
     .note {

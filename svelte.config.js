@@ -9,9 +9,11 @@ const config = {
   preprocess: [
     orgPreprocess({
       extensions: [".org"],
+      anchorFormat: '<Link href=\\"%s\\">%s</Link>',
       componentImportAlist: {
         "$lib/components/code.svelte": "Code",
         "$lib/components/math.svelte": "Math",
+        "$lib/components/link.svelte": "Link",
       },
       idLocations: ["src/data/knowledges/*.org", "src/data/thoughts/*.org"],
       imageFormat: '<enhanced:img src=\\"%s\\" alt=\\"%s\\" />',

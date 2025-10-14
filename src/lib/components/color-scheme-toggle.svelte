@@ -18,8 +18,8 @@
   }
 
   div {
-    --width: var(--size, 100px);
-    --height: calc(var(--width) / 2);
+    --height: 1.5rem;
+    --width: calc(var(--height) * 2);
 
     --knob-size: calc(var(--height) * 3 / 4);
     --knob-gap: calc(var(--height) / 8);
@@ -30,6 +30,24 @@
     --light-back: #75c2f6;
     --dark-knob: #f9e8c9;
     --dark-back: #546bab;
+  }
+
+  @screen md {
+    div {
+      --height: 1.75rem;
+    }
+  }
+
+  @screen lg {
+    div {
+      --height: 2rem;
+    }
+  }
+
+  @screen xl {
+    div {
+      --height: 2.5rem;
+    }
   }
 
   input {
