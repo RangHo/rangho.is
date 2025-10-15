@@ -8,7 +8,10 @@ import {
   transformerVariantGroup,
 } from "unocss";
 
+import extractorSvelte from "@unocss/extractor-svelte";
+
 export default defineConfig({
+  extractors: [extractorSvelte()],
   presets: [
     presetWind4(),
     presetTypography({
