@@ -8,7 +8,7 @@
   let { something }: Props = $props();
 </script>
 
-<header class="sticky top-0 bg-transparent backdrop-blur-xl">
+<header class="sticky top-0 z-9999 bg-transparent backdrop-blur-xl">
   <nav class="w-full flex items-center justify-around text-center mx-auto p-4">
     <div
       class="flex items-center space-x-3 font-head text-2xl md:text-3xl lg:text-4xl xl:text-5xl"

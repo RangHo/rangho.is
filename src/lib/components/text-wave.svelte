@@ -8,7 +8,7 @@
   let { text, bold = false, italic = false }: Props = $props();
 </script>
 
-<span class="wavy" class:font-bold={bold} class:italic={italic}>
+<span class="wavy" class:font-bold={bold} class:italic>
   {#each text as c, i}
     <span style:animation-delay="calc(var(--delay, .1s) * {i})">
       {c}
