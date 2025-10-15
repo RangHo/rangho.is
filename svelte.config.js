@@ -13,10 +13,11 @@ const config = {
       componentImportAlist: {
         "$lib/components/code.svelte": "Code",
         "$lib/components/math.svelte": "Math",
+        "$lib/components/image.svelte": "Image",
         "$lib/components/link.svelte": "Link",
       },
       idLocations: ["src/data/knowledges/*.org", "src/data/thoughts/*.org"],
-      imageFormat: '<enhanced:img src=\\"%s\\" alt=\\"%s\\" />',
+      imageFormat: '<Image src=\\"%s\\" alt=\\"%s\\" />',
       latexEnvironmentFormat: "<Math expression={%s} displayMode />",
       latexDisplayFragmentFormat:
         "<Math expression={%s} displayMode inlineMode />",

@@ -16,7 +16,7 @@
 
   let isExternal = $derived(hrefUrl.origin !== page.url.origin);
 
-  function resolveData(url: URL, path: string): string | undefined {
+  function resolveHref(url: URL, path: string): string | undefined {
     // Extract the first part of the path to determine the type of content.
     const something = url.pathname.split("/")[1];
 
@@ -27,12 +27,12 @@
         slug = thoughts.find((t) => t.original === path)?.slugified;
         break;
       default:
-        return undefined;
+        return;
     }
 
     if (!slug) {
       // Oops. no matching slug.
-      return undefined;
+      return;
     }
 
     // Construct the URL.
@@ -41,7 +41,7 @@
   }
 
   let resolvedHref = $derived(
-    isExternal ? hrefUrl.href : resolveData(page.url, href),
+    isExternal ? hrefUrl.href : resolveHref(page.url, href),
   );
 </script>
 

@@ -1,4 +1,5 @@
 import type { Component } from "svelte";
+import type { EnhancedImgAttributes } from "@sveltejs/enhanced-img";
 import type { OrgMetadata, OrgModule } from "ox-svelte";
 
 export type Thought = {
@@ -6,19 +7,23 @@ export type Thought = {
   slugified: string;
   component: Component;
   metadata: OrgMetadata;
-  assets: [string, unknown][];
+  assets: Record<string, EnhancedImgAttributes["src"]>;
 };
 
 const thoughtsRaw = import.meta.glob<OrgModule>("$data/thoughts/*.org", {
   eager: true,
 });
 
-const thoughtsAssets = import.meta.glob("$data/thoughts/assets/**/*", {
-  eager: true,
-  query: {
-    enhanced: true,
+const thoughtsAssets = import.meta.glob<EnhancedImgAttributes["src"]>(
+  "$data/thoughts/assets/**/*",
+  {
+    eager: true,
+    import: "default",
+    query: {
+      enhanced: true,
+    },
   },
-});
+);
 
 export const thoughts: Thought[] = Object.entries(thoughtsRaw).map(
   ([path, module]) => {
@@ -30,8 +35,12 @@ export const thoughts: Thought[] = Object.entries(thoughtsRaw).map(
       slugified,
       component: module.default,
       metadata: module.metadata,
-      assets: Object.entries(thoughtsAssets).filter(([assetPath]) =>
-        assetPath.includes(basenameSansExtension + "/"),
+      assets: Object.fromEntries(
+        Object.entries(thoughtsAssets)
+          .filter(([assetPath]) =>
+            assetPath.includes(basenameSansExtension + "/"),
+          )
+          .map(([path, module]) => [path.split("/").pop()!, module]),
       ),
     };
   },
