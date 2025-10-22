@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { HTMLImgAttributes } from "svelte/elements";
-  import type { EnhancedImgAttributes } from "@sveltejs/enhanced-img";
 
   import { page } from "$app/state";
   import { thoughts } from "$lib/data";
@@ -25,7 +24,7 @@
         const currentThought = thoughts.find((t) => t.slugified === slug);
         if (!currentThought) {
           console.warn(`Could not find thought with slug: ${slug}`);
-          return;
+          return path;
         }
 
         // If we found the thought, we can return the asset.
@@ -33,14 +32,12 @@
         return currentThought.assets[filename];
       }
       default:
-        return;
+        return path;
     }
   }
 
   let resolvedSrc = $derived(
-    isExternal
-      ? srcUrl.href
-      : (resolveSrc(page.url, src)),
+    isExternal ? srcUrl.href : resolveSrc(page.url, src),
   );
 </script>
 

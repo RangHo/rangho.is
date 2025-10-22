@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { Snippet } from "svelte";
   import type { HTMLAnchorAttributes } from "svelte/elements";
+  import type { Snippet } from "svelte";
 
   import { page } from "$app/state";
   import { thoughts } from "$lib/data";
@@ -32,7 +32,7 @@
 
     if (!slug) {
       // Oops. no matching slug.
-      return;
+      return path;
     }
 
     // Construct the URL.
@@ -45,7 +45,7 @@
   );
 </script>
 
-<a class:external={isExternal} href={resolvedHref} {...attr}>
+<a class:external={isExternal} href={resolve(resolvedHref)} {...attr}>
   {@render children()}
 </a>
 
