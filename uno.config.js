@@ -31,9 +31,9 @@ export default defineConfig({
     presetWebFonts({
       provider: "fontsource",
       fonts: {
-        head: ["Gugi", "WDXL Lubrifont JP N", "cursive"],
-        sans: ["Noto Sans", "Noto Sans KR", "Noto Sans JP", "sans-serif"],
-        mono: ["Victor Mono", "monospace"],
+        head: ["Gugi", "WDXL Lubrifont JP N"],
+        sans: ["Noto Sans", "Noto Sans KR", "Noto Sans JP"],
+        mono: ["Victor Mono"],
       },
     }),
   ],

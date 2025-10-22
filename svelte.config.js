@@ -9,15 +9,15 @@ const config = {
   preprocess: [
     orgPreprocess({
       extensions: [".org"],
-      anchorFormat: '<Link href=\\"%s\\">%s</Link>',
+      anchorFormat: '<OrgLink href=\\"%s\\">%s</OrgLink>',
       componentImportAlist: {
         "$lib/components/code.svelte": "Code",
         "$lib/components/math.svelte": "Math",
-        "$lib/components/image.svelte": "Image",
-        "$lib/components/link.svelte": "Link",
+        "$lib/components/org-image.svelte": "OrgImage",
+        "$lib/components/org-link.svelte": "OrgLink",
       },
       idLocations: ["src/data/knowledges/*.org", "src/data/thoughts/*.org"],
-      imageFormat: '<Image src=\\"%s\\" alt=\\"%s\\" />',
+      imageFormat: '<OrgImage src=\\"%s\\" alt=\\"%s\\" />',
       latexEnvironmentFormat: "<Math expression={%s} displayMode />",
       latexDisplayFragmentFormat:
         "<Math expression={%s} displayMode inlineMode />",
