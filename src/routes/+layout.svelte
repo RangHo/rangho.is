@@ -22,4 +22,6 @@
 <CodeStylesheet dark="night-owl" light="nord" />
 <MathStylesheet />
 
-{@render children()}
+<div class="transition-all">
+  {@render children()}
+</div>

@@ -1,4 +1,3 @@
-<!-- eslint-disable svelte/no-at-html-tags -->
 <script lang="ts">
   import hljs from "highlight.js";
 
@@ -12,5 +11,6 @@
   let renderedHTML = $derived(hljs.highlight(code, { language: lang }).value);
 </script>
 
+<!-- eslint-disable svelte/no-at-html-tags -->
 <!-- prettier-ignore -->
-<pre class="hljs not-prose m-4 p-4 rounded-sm md:rounded-md lg:rounded-lg text-sm md:text-base lg:text-lg"><code class={`language-${lang}`}>{@html renderedHTML}</code></pre>
+<pre class="hljs not-prose m-4 p-4 rounded-sm text-xs md:(rounded-md text-sm) lg:(rounded-lg text-base)"><code class={`language-${lang}`}>{@html renderedHTML}</code></pre>

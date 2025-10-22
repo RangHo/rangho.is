@@ -2,15 +2,15 @@
   import TextWave from "$lib/components/text-wave.svelte";
 </script>
 
-<div class="w-full h-full flex items-center text-center font-head text-6xl">
-  <p>
-    rangho is...<br />
-    <TextWave
-      text="something"
-      bold italic
-      --amplitude="10%"
-      --delay=".2s"
-      --duration="1.5s"
-    />
-  </p>
-</div>
+<main class="flex h-screen">
+  <div class="m-auto font-head">
+    <p class="text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+      what is rangho <TextWave text="doing" --amplitude="10%" />?
+    </p>
+    <div class="text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+      <span class="baseurl">rangho.is</span>
+      <span class="separator">/</span>
+      <button>something</button>
+    </div>
+  </div>
+</main>

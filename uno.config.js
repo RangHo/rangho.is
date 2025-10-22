@@ -16,6 +16,7 @@ export default defineConfig({
     presetWind4(),
     presetTypography({
       cssExtend: (theme) => ({
+        "max-width": "80ch",
         // Override font family setting for headings.
         "h1, h2, h3, h4, h5, h6": {
           "font-family": "var(--font-head)",
@@ -30,9 +31,9 @@ export default defineConfig({
     presetWebFonts({
       provider: "fontsource",
       fonts: {
-        head: ["Gugi", "WDXL Lubrifont JP N"],
-        sans: ["Noto Sans", "Noto Sans KR", "Noto Sans JP"],
-        mono: "Victor Mono",
+        head: ["Gugi", "WDXL Lubrifont JP N", "cursive"],
+        sans: ["Noto Sans", "Noto Sans KR", "Noto Sans JP", "sans-serif"],
+        mono: ["Victor Mono", "monospace"],
       },
     }),
   ],
