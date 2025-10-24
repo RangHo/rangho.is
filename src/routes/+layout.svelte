@@ -19,7 +19,7 @@
 
 <ColorSchemeService />
 
-<CodeStylesheet dark="night-owl" light="nord" />
+<CodeStylesheet dark="atom-one-dark" light="atom-one-light" />
 <MathStylesheet />
 
 <div class="transition-all">

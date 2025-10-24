@@ -3,7 +3,7 @@
 </script>
 
 <main class="flex h-screen">
-  <div class="m-auto font-head">
+  <div class="font-head m-auto">
     <p class="text-base lg:text-lg xl:text-xl 2xl:text-2xl">
       what is rangho <TextWave text="doing" --amplitude="10%" />?
     </p>

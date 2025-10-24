@@ -2,6 +2,7 @@
   import type { HTMLAnchorAttributes } from "svelte/elements";
   import type { Snippet } from "svelte";
 
+  import { resolve } from "$app/paths";
   import { page } from "$app/state";
   import { thoughts } from "$lib/data";
 
@@ -45,7 +46,7 @@
   );
 </script>
 
-<a class:external={isExternal} href={resolve(resolvedHref)} {...attr}>
+<a class:external={isExternal} href={resolvedHref} {...attr}>
   {@render children()}
 </a>
 

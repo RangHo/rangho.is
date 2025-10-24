@@ -10,11 +10,13 @@
 </script>
 
 <header class="sticky top-0 z-9999 bg-transparent backdrop-blur-xl">
-  <nav class="flex items-center justify-between
-    mx-auto p-2 md:p-3 lg:p-4 xl:p-5 w-full
-    text-center">
+  <nav
+    class="mx-auto flex w-full
+    items-center justify-between p-2 text-center md:p-3 lg:p-4
+    xl:p-5"
+  >
     <div
-      class="flex items-center space-x-3 font-head text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
+      class="font-head flex items-center space-x-3 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
     >
       <a class="mr-2 text-gray-500/50" href={resolve("/")}>rangho.is</a>
       <span class="mr-2 text-gray-800/50 dark:text-gray-200/50">/</span>

@@ -5,18 +5,20 @@
   import Comment from "$lib/components/comment.svelte";
 
   let { data }: PageProps = $props();
-  let { component: Thought, metadata } = data;
+  let { component: Thought, metadata } = $derived(data);
 </script>
 
 <main
-  class="mx-auto my-5 px-4
-  prose prose-teal prose-sm md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert"
+  class="prose prose-sm md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert m-auto px-4"
 >
-  <hgroup class="pb-5 mb-10 font-head">
+  <hgroup class="font-head">
     <h1 class="my-0">{metadata.title}</h1>
-    <p class="my-5">{metadata.subtitle}</p>
+    <p class="my-2 md:my-3 lg:my-4 xl:my-5">{metadata.subtitle}</p>
   </hgroup>
-  <article class="my-20">
+  <article
+    class="my-5 md:my-10 lg:my-15 xl:my-20"
+    lang={metadata.language || "en"}
+  >
     <AdmonitionProvider><Thought /></AdmonitionProvider>
   </article>
   <Comment
@@ -31,9 +33,3 @@
     lang={metadata.language || "en"}
   />
 </main>
-
-<style>
-  hgroup {
-    border-bottom: 5px double var(--un-prose-hr);
-  }
-</style>
