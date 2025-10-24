@@ -1,12 +1,16 @@
 <script lang="ts">
   import type { PageProps } from "./$types";
 
+  import { MetaTags } from "svelte-meta-tags";
+
   import AdmonitionProvider from "$lib/components/admonition-provider.svelte";
   import Comment from "$lib/components/comment.svelte";
 
   let { data }: PageProps = $props();
   let { component: Thought, metadata } = $derived(data);
 </script>
+
+<MetaTags title={metadata.title} description={metadata.description} />
 
 <main
   class="prose prose-sm md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert m-auto px-4"

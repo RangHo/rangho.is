@@ -17,6 +17,22 @@
   let { children }: Props = $props();
 </script>
 
+<svelte:head>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-RF0SHXN2NY"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-RF0SHXN2NY");
+  </script>
+</svelte:head>
+
 <ColorSchemeService />
 
 <CodeStylesheet dark="atom-one-dark" light="atom-one-light" />
