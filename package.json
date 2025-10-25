@@ -32,7 +32,7 @@
     "@types/node": "^22.18.10",
     "@unocss/extractor-svelte": "^66.5.4",
     "@unocss/reset": "^66.5.3",
-    "eslint": "^9.37.0",
+    "eslint": "^9.38.0",
     "eslint-plugin-svelte": "^3.12.4",
     "globals": "^16.4.0",
     "ox-svelte": "^0.4.4",
