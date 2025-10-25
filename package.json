@@ -33,7 +33,7 @@
     "@unocss/extractor-svelte": "^66.5.4",
     "@unocss/reset": "^66.5.3",
     "eslint": "^9.38.0",
-    "eslint-plugin-svelte": "^3.12.4",
+    "eslint-plugin-svelte": "^3.12.5",
     "globals": "^16.4.0",
     "ox-svelte": "^0.4.4",
     "prettier": "^3.6.2",
