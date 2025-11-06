@@ -1,9 +1,11 @@
 <script lang="ts">
-  import { default as Giscus, type GiscusProps } from "@giscus/svelte";
+  import type { ComponentProps } from "svelte";
+
+  import Giscus from "@giscus/svelte";
 
   import { getColorScheme } from "$lib/color-scheme.svelte";
 
-  let props: Omit<GiscusProps, "theme"> = $props();
+  let props: Omit<ComponentProps<Giscus>, "theme"> = $props();
 
   let scheme = getColorScheme();
 </script>
