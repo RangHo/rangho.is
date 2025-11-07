@@ -26,11 +26,13 @@
     <AdmonitionProvider><Thought /></AdmonitionProvider>
   </article>
   <Comment
-    repo="RangHo/thoughts"
-    repoId="R_kgDOHtWVvw"
+    id="comments"
+    repo="RangHo/rangho.is"
+    repoId="R_kgDOP2lE8w"
     category="Comments"
-    categoryId="DIC_kwDOHtWVv84CT8zK"
-    mapping="url"
+    categoryId="DIC_kwDOP2lE884Cv_SG"
+    mapping="pathname"
+    term="thinking"
     strict="0"
     reactionsEnabled="1"
     inputPosition="bottom"
