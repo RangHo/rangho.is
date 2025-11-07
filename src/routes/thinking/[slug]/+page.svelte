@@ -39,3 +39,15 @@
     lang={metadata.language || "en"}
   />
 </main>
+
+<style>
+  :global {
+    figcaption {
+      text-align: center;
+    }
+
+    .figure-number {
+      padding-right: 0.5rem;
+    }
+  }
+</style>

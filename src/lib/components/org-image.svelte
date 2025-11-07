@@ -41,4 +41,8 @@
   );
 </script>
 
-<enhanced:img src={resolvedSrc} {...rest} />
+<enhanced:img
+  class="mx-auto"
+  src={resolvedSrc}
+  {...rest}
+/>
