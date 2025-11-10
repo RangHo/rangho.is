@@ -21,7 +21,7 @@
   "devDependencies": {
     "@eslint/compat": "^1.4.1",
     "@eslint/css": "^0.13.0",
-    "@eslint/js": "^9.38.0",
+    "@eslint/js": "^9.39.1",
     "@giscus/svelte": "^3.1.0",
     "@iconify-json/simple-icons": "^1.2.57",
     "@iconify-json/tabler": "^1.2.23",
