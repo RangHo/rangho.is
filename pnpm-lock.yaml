@@ -64,8 +64,8 @@ importers:
         specifier: ^16.4.0
         version: 16.4.0
       ox-svelte:
-        specifier: ^0.4.5
-        version: 0.4.5(svelte@5.41.4)
+        specifier: ^0.4.7
+        version: 0.4.7(svelte@5.41.4)
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
@@ -82,8 +82,8 @@ importers:
         specifier: ^4.5.0
         version: 4.5.0(svelte@5.41.4)
       svelte-preprocess-org:
-        specifier: ^0.3.4
-        version: 0.3.4(ox-svelte@0.4.5(svelte@5.41.4))(svelte@5.41.4)
+        specifier: ^0.3.5
+        version: 0.3.5(ox-svelte@0.4.7(svelte@5.41.4))(svelte@5.41.4)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -1378,8 +1378,8 @@ packages:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
     engines: {node: '>= 0.8.0'}
 
-  ox-svelte@0.4.5:
-    resolution: {integrity: sha512-BNMiQphwBzazOTMmX/djRaM/ZWxT8DNNREcZEVd4sxJWBw9owjuWGpx9LD6u0lAczc3H+IVPtGXRg1CMcyd/bQ==}
+  ox-svelte@0.4.7:
+    resolution: {integrity: sha512-w51HBA/TV0cnEBFzoqPeuIZzakp6IxWLvrOPk4owYOvvE38Q5/HUB0Ni4R91Wh58EqYC3OqwfUJzlPZZt7krCg==}
     peerDependencies:
       svelte: ^5.1.9
 
@@ -1580,10 +1580,10 @@ packages:
     peerDependencies:
       svelte: ^3.0.0 || ^4.0.0 || ^5.0.0-next.1
 
-  svelte-preprocess-org@0.3.4:
-    resolution: {integrity: sha512-UngQNk128bLdAMJZ5lDYi7RqOQkY9d4HRhrRhuFYHbMKtd1XtjWjHR/KiGZYZxQt/fab2+i4F1hpMyyN3uB2dw==}
+  svelte-preprocess-org@0.3.5:
+    resolution: {integrity: sha512-gmGh9/bsM9aIcLyKaTnkHWfeRL/Wa5I9hfWXkO1rqZZr1X8nq2MkzEaFy+P2TpjS+OQiquKzKB3pq7f1lyqynA==}
     peerDependencies:
-      ox-svelte: 0.4.5
+      ox-svelte: 0.4.7
       svelte: ^5.2.11
 
   svelte@5.41.4:
@@ -2989,7 +2989,7 @@ snapshots:
       type-check: 0.4.0
       word-wrap: 1.2.5
 
-  ox-svelte@0.4.5(svelte@5.41.4):
+  ox-svelte@0.4.7(svelte@5.41.4):
     dependencies:
       svelte: 5.41.4
     optionalDependencies:
@@ -3209,9 +3209,9 @@ snapshots:
     dependencies:
       svelte: 5.41.4
 
-  svelte-preprocess-org@0.3.4(ox-svelte@0.4.5(svelte@5.41.4))(svelte@5.41.4):
+  svelte-preprocess-org@0.3.5(ox-svelte@0.4.7(svelte@5.41.4))(svelte@5.41.4):
     dependencies:
-      ox-svelte: 0.4.5(svelte@5.41.4)
+      ox-svelte: 0.4.7(svelte@5.41.4)
       svelte: 5.41.4
       tinyglobby: 0.2.15
 
