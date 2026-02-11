@@ -38,7 +38,7 @@
           {/if}
         </ul>
         <p class="text-gray-700 dark:text-gray-300">
-          {entry.description}
+          {@html entry.description}
         </p>
       </div>
     </a>
