@@ -29,6 +29,9 @@ jobs:
         with:
           version: 30.2
 
+      - name: Make user-emacs-directory
+        run: mkdir ".emacs.d"
+
       - name: Build project
         run: |
           pnpm install
