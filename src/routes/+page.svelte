@@ -4,7 +4,7 @@
 
   import TextWave from "$lib/components/text-wave.svelte";
 
-  const somethings = ["thinking", "knowing", "talking"];
+  const somethings = ["thinking"];
 
   let something = $state("");
 
