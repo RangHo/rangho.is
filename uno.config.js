@@ -33,6 +33,7 @@ export default defineConfig({
       fonts: {
         head: ["Gugi", "WDXL Lubrifont JP N"],
         sans: ["Noto Sans", "Noto Sans KR", "Noto Sans JP"],
+        serif: ["Gowun Batang", "Noto Serif", "Noto Serif KR", "Noto Serif JP"],
         mono: ["Victor Mono"],
       },
     }),

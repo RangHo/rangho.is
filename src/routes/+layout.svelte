@@ -38,6 +38,6 @@
 <CodeStylesheet dark="atom-one-dark" light="atom-one-light" />
 <MathStylesheet />
 
-<div class="transition-all">
+<div class="transition-all font-serif">
   {@render children()}
 </div>
