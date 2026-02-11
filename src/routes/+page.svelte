@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { goto } from "$app/navigation";
+  import { resolve } from "$app/paths";
+
   import TextWave from "$lib/components/text-wave.svelte";
 
   const somethings = ["thinking", "knowing", "talking"];
@@ -17,12 +20,15 @@
     <p class="text-base lg:text-lg xl:text-xl 2xl:text-2xl">
       what is rangho <TextWave text="doing" --amplitude="10%" />?
     </p>
-    <div class="text-2xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+    <div class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
       <span class="baseurl">rangho.is</span>
       <span class="separator">/</span>
-      <form class="inline-block">
+      <form
+        class="inline-block"
+        onsubmit={() => { goto(`/${something}`); }}
+      >
         <input
-          class="relative border-b-2 top-0 left-0 w-xs focus:outline-none md:(w-sm border-b-3) lg:(w-md border-b-4) xl:(w-lg border-b-5) 2xl:(w-xl border-b-6)"
+          class="relative border-b-2 top-0 left-0 w-40 focus:outline-none md:(w-60 border-b-3) lg:(w-80 border-b-4) xl:(w-96 border-b-5) 2xl:(w-128 border-b-6)"
           type="text"
           placeholder="something"
           bind:value={something}
@@ -34,7 +40,11 @@
           class:opened={focused}
         >
           {#each filteredSomethings as option}
-            <li class="my-5">{option}</li>
+            <li class="my-5 p-1 hover:(bg-gray-50 text-black)">
+              <a href="/{option}">
+                {option}
+              </a>
+            </li>
           {/each}
         </ul>
       </form>
@@ -44,6 +54,6 @@
 
 <style>
   .opened {
-    max-height: 16rem;
+    max-height: 20rem;
   }
 </style>
