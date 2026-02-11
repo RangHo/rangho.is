@@ -17,8 +17,25 @@
 >
   <hgroup class="font-head">
     <h1 class="my-0">{metadata.title}</h1>
-    <p class="my-2 md:my-3 lg:my-4 xl:my-5">{metadata.subtitle}</p>
+    <p class="my-0 mt-2 md:mt-3 lg:mt-4 xl:mt-5">{metadata.subtitle}</p>
+    <ul
+      class="metadata list-none mx-auto my-0 mt-1 p-0 flex flex-row justify-center text-gray-600 dark:text-gray-400"
+    >
+      {#if metadata.date}
+        <li class="m-0 p-0">
+          <span class="i i-tabler:calendar"></span>
+          {new Date(metadata.date).toDateString()}
+        </li>
+      {/if}
+      {#if metadata.category}
+        <li class="m-0 p-0"><span class="i i-tabler:category"></span> {metadata.category}</li>
+      {/if}
+      {#if metadata.language}
+        <li class="m-0 p-0"><span class="i i-tabler:language"></span> {metadata.language}</li>
+      {/if}
+    </ul>
   </hgroup>
+  <hr class="m-2">
   <article
     class="my-5 md:my-10 lg:my-15 xl:my-20"
     lang={metadata.language || "en"}
@@ -49,5 +66,20 @@
     .figure-number {
       padding-right: 0.5rem;
     }
+  }
+
+  .i {
+    display: inline-block;
+    vertical-align: -0.15em;
+  }
+
+  .metadata li::after {
+    content: "·";
+
+    padding: 0 0.5em;
+  }
+
+  .metadata li:last-of-type::after {
+    content: "";
   }
 </style>
