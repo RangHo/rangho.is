@@ -16,7 +16,7 @@
         class="m-10 border rounded-md p-4 text-sm md:(text-base p-6) lg:(text-lg p-8) xl:(text-xl p-10)"
       >
         <h1
-          class="font-head text-xl md:(mb-3 text-2xl) lg:(mb-4 text-3xl) xl:(mb-5 text-4xl)"
+          class="font-head font-bold text-xl md:(mb-3 text-2xl) lg:(mb-4 text-3xl) xl:(mb-5 text-4xl)"
         >
           {entry.title}
         </h1>
@@ -37,7 +37,7 @@
             <li><span class="i i-tabler:language"></span> {entry.language}</li>
           {/if}
         </ul>
-        <p class="text-gray-700 dark:text-gray-300">
+        <p class="font-semibold text-gray-700 dark:text-gray-300">
           {@html entry.description}
         </p>
       </div>

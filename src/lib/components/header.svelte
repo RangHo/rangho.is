@@ -16,12 +16,12 @@
     xl:p-5"
   >
     <div
-      class="font-head flex items-center space-x-3 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
+      class="font-head font-bold flex items-center space-x-3 text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
     >
       <a class="mr-2 text-gray-500/50" href={resolve("/")}>rangho.is</a>
       <span class="mr-2 text-gray-800/50 dark:text-gray-200/50">/</span>
       <a
-        class="text-gray-800 dark:text-gray-200"
+        class="font-extrabold text-gray-800 dark:text-gray-200"
         href={resolve(`/${something}`)}
       >
         {something}

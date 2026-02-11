@@ -37,10 +37,10 @@
 
 <main class="flex h-screen">
   <div class="font-head m-auto p-5">
-    <p class="text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+    <p class="font-semibold text-base lg:text-lg xl:text-xl 2xl:text-2xl">
       what is rangho <TextWave text="doing" --amplitude="10%" />?
     </p>
-    <div class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
+    <div class="font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">
       <span class="baseurl">rangho.is</span>
       <span class="separator">/</span>
       <form
