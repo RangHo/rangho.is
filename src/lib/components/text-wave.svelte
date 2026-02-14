@@ -20,10 +20,10 @@
   @keyframes wave {
     0%,
     100% {
-      transform: translateY(0);
+      transform: translateY(calc(var(--amplitude, 15%) * -1));
     }
     50% {
-      transform: translateY(var(--amplitude, 15%));
+      transform: translateY(calc(var(--amplitude, 15%) * 1));
     }
   }
 
