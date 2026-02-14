@@ -23,10 +23,7 @@
     >
       <a class="mr-2 text-gray-500/50" href="/">rangho.is</a>
       <span class="mr-2 text-gray-800/50 dark:text-gray-200/50">/</span>
-      <a
-        class="font-extrabold text-gray-800 dark:text-gray-200"
-        {href}
-      >
+      <a class="font-extrabold text-gray-800 dark:text-gray-200" {href}>
         {something}
       </a>
     </div>

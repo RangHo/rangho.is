@@ -12,9 +12,12 @@ export type Knowledge = {
   component: Component;
 };
 
-export const rawEntries = import.meta.glob<OrgModule>("$data/knowledges/*.org", {
-  eager: true,
-});
+export const rawEntries = import.meta.glob<OrgModule>(
+  "$data/knowledges/*.org",
+  {
+    eager: true,
+  },
+);
 
 export const entries: Knowledge[] = Object.entries(rawEntries).map(
   ([path, module]) => {
@@ -25,8 +28,8 @@ export const entries: Knowledge[] = Object.entries(rawEntries).map(
       filename: basenameSansExtension,
       component: module.default,
       title: module.metadata.title || basenameSansExtension,
-    }
-  }
-)
+    };
+  },
+);
 
 export const images = {} as Record<string, EnhancedImgAttributes["src"]>;

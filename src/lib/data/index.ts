@@ -7,6 +7,4 @@ export {
   images as knowledgeImages,
 } from "$lib/data/knowledges";
 
-export const somethings = [
-  "thinking",
-]
+export const somethings = ["thinking"];
