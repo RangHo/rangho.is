@@ -2,7 +2,8 @@
   import type { HTMLImgAttributes } from "svelte/elements";
 
   import { page } from "$app/state";
-  import { thoughts } from "$lib/data";
+  import { thoughtImages } from "$lib/data";
+  import type { EnhancedImgSrc } from "$lib/types";
 
   interface Props extends HTMLImgAttributes {
     src: string;
@@ -17,23 +18,34 @@
   function resolveSrc(url: URL, path: string) {
     // Extract the first segment of the path to determine the type of content.
     const something = url.pathname.split("/")[1];
-    switch (something) {
-      case "thinking": {
-        // For thoughts assets, we should be able to find the assets by slug.
-        const slug = url.pathname.split("/")[2];
-        const currentThought = thoughts.find((t) => t.slugified === slug);
-        if (!currentThought) {
-          console.warn(`Could not find thought with slug: ${slug}`);
-          return path;
-        }
 
-        // If we found the thought, we can return the asset.
-        const filename = path.split("/").pop()!;
-        return currentThought.assets[filename];
-      }
+    // Populate the "image registry" based on the type of content.
+    let images: Record<string, EnhancedImgSrc>;
+    switch (something) {
+      case "thinking":
+        // This should target "thoughts".
+        images = thoughtImages;
+        break;
+
       default:
+        console.warn(`Unknown content type "${something}".`);
         return path;
     }
+
+    // Look up the image in the registry.
+    const filename = path.split("/").pop();
+    if (!filename) {
+      console.warn(`Unable to extract filename from path "${path}".`);
+      return path;
+    }
+
+    const image = images[filename];
+    if (!image) {
+      console.warn(`Image "${filename}" not found in registry.`);
+      return path;
+    }
+
+    return image;
   }
 
   let resolvedSrc = $derived(
@@ -41,8 +53,4 @@
   );
 </script>
 
-<enhanced:img
-  class="mx-auto"
-  src={resolvedSrc}
-  {...rest}
-/>
+<enhanced:img class="mx-auto" src={resolvedSrc} {...rest} />
