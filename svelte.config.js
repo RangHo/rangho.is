@@ -46,6 +46,9 @@ const config = {
     paths: {
       base: process.argv.includes("dev") ? "" : process.env.BASE_PATH,
     },
+    prerender: {
+      handleMissingId: "warn",
+    },
   },
 };
 
