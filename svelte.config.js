@@ -37,9 +37,14 @@ const config = {
     vitePreprocess(),
   ],
   kit: {
-    adapter: adapter(),
+    adapter: adapter({
+      fallback: "404.html",
+    }),
     alias: {
       $data: "src/data",
+    },
+    paths: {
+      base: process.argv.includes("dev") ? "" : process.env.BASE_PATH,
     },
   },
 };
