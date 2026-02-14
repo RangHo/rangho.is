@@ -6,3 +6,7 @@ export {
   entries as knowledges,
   images as knowledgeImages,
 } from "$lib/data/knowledges";
+
+export const somethings = [
+  "thinking",
+]

@@ -1,10 +1,8 @@
 <script lang="ts">
   import { goto } from "$app/navigation";
-  import { resolve } from "$app/paths";
 
   import TextWave from "$lib/components/text-wave.svelte";
-
-  const somethings = ["thinking"];
+  import { somethings } from "$lib/data";
 
   let something = $state("");
 
