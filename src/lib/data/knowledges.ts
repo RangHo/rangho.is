@@ -7,10 +7,26 @@ import type { OrgMetadata, OrgModule } from "ox-svelte";
  */
 export type Knowledge = {
   original: string;
-  name: string;
+  filename: string;
+  title: string;
   component: Component;
 };
 
-export const entries = [] as Knowledge[];
+export const rawEntries = import.meta.glob<OrgModule>("$data/knowledges/*.org", {
+  eager: true,
+});
+
+export const entries: Knowledge[] = Object.entries(rawEntries).map(
+  ([path, module]) => {
+    const basename = path.split("/").pop()!;
+    const basenameSansExtension = basename.replace(/\.org$/, "");
+    return {
+      original: basename,
+      filename: basenameSansExtension,
+      component: module.default,
+      title: module.metadata.title || basenameSansExtension,
+    }
+  }
+)
 
 export const images = {} as Record<string, EnhancedImgAttributes["src"]>;
