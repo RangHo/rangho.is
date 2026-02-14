@@ -52,7 +52,13 @@
 
 <style>
   .external::before {
-    content: "🔗";
+    @apply i-tabler:link;
+    content: var(--un-icon);
+
+    display: inline-block;
+
+    position: relative;
+    top: 0.5em;
     margin-right: 0.1em;
   }
 </style>
