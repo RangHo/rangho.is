@@ -28,14 +28,20 @@
         </li>
       {/if}
       {#if metadata.category}
-        <li class="m-0 p-0"><span class="i i-tabler:category"></span> {metadata.category}</li>
+        <li class="m-0 p-0">
+          <span class="i i-tabler:category"></span>
+          {metadata.category}
+        </li>
       {/if}
       {#if metadata.language}
-        <li class="m-0 p-0"><span class="i i-tabler:language"></span> {metadata.language}</li>
+        <li class="m-0 p-0">
+          <span class="i i-tabler:language"></span>
+          {metadata.language}
+        </li>
       {/if}
     </ul>
   </hgroup>
-  <hr class="m-2">
+  <hr class="m-2" />
   <article
     class="my-5 md:my-10 lg:my-15 xl:my-20"
     lang={metadata.language || "en"}
