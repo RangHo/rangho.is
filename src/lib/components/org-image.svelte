@@ -2,7 +2,7 @@
   import type { HTMLImgAttributes } from "svelte/elements";
 
   import { page } from "$app/state";
-  import { thoughtImages } from "$lib/data";
+  import { images as thoughtImages } from "$lib/data/thoughts";
   import type { EnhancedImgSrc } from "$lib/types";
 
   interface Props extends HTMLImgAttributes {

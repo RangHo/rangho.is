@@ -1,9 +1,9 @@
 import type { PageLoad } from "./$types";
 
-import { thoughts } from "$lib/data";
+import { entries } from "$lib/data/thoughts";
 
 export const load: PageLoad = async () => ({
-  entries: thoughts
+  entries: entries
     .map((t) => ({
       slugified: t.slugified,
       ...t.metadata,

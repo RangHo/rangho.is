@@ -13,7 +13,7 @@ declare global {
 
   declare const __DEV_DEPENDENCIES__: typeof pkg.devDependencies;
 
-  declare "*.org" {
+  declare module "*.org" {
     const component: Component;
 
     export default component;
@@ -26,7 +26,7 @@ declare global {
       env: Env;
       ctx: ExecutionContext;
       caches: CacheStorage;
-      cf?: IncomingRequestCfProperties
+      cf?: IncomingRequestCfProperties;
     }
   }
 

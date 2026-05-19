@@ -23,7 +23,7 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 # Emacs
-/.emacs.d
+/.emacs.d/*
 
-.dev.vars*
-!.dev.vars.example
+# Generated
+/src/lib/generated/*

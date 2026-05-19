@@ -4,7 +4,7 @@
 
   import { resolve } from "$app/paths";
   import { page } from "$app/state";
-  import { thoughts } from "$lib/data";
+  import { entries as thoughts } from "$lib/data/thoughts";
 
   interface Props extends HTMLAnchorAttributes {
     href: string;

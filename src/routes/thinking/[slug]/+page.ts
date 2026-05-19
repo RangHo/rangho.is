@@ -1,8 +1,11 @@
-import type { PageLoad } from "./$types";
+import type { EntryGenerator, PageLoad } from "./$types";
 
 import { error } from "@sveltejs/kit";
 
-import { thoughts } from "$lib/data";
+import { entries as thoughts } from "$lib/data/thoughts";
+
+export const entries: EntryGenerator = () =>
+  thoughts.map((t) => ({ slug: t.slugified }))
 
 export const load: PageLoad = async ({ params }) => {
   const entry = thoughts.find((t) => t.slugified === params.slug);
@@ -10,8 +13,5 @@ export const load: PageLoad = async ({ params }) => {
     error(404, "Not found");
   }
 
-  return {
-    component: entry.component,
-    metadata: entry.metadata,
-  };
+  return entry;
 };
