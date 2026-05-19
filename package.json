@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "prepare": "svelte-kit sync || echo ''",
+    "generate:knowledges": "emacs --init-directory=./.emacs.d --script ./scripts/extract-org-node.el ./src/lib/generated/knowledges.json ./src/data/knowledges/*.org",
     "types": "wrangler types",
     "check": "wrangler types --check && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
